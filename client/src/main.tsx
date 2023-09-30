@@ -10,6 +10,7 @@ import {
   Login,
   Product,
   SignUp,
+  Error404,
 } from "./pages";
 import { AccountProvider } from "./context";
 import "./index.scss";
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <div>404</div>,
+    element: <Error404 />,
   },
 ]);
 
