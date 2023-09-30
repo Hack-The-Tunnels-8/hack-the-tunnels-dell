@@ -39,3 +39,23 @@ export const create = async (
 
   return newProduct;
 };
+
+export const update = async (
+  id: string,
+  title: string,
+  description: string,
+  price: number,
+  imageUrl: string,
+): Promise<Product> => {
+  const product = await prisma.product.update({
+    where: { id: parseInt(id) },
+    data: {
+      title: title,
+      description: description,
+      price: price,
+      imageUrl: imageUrl,
+    },
+  });
+
+  return product;
+}

@@ -60,8 +60,68 @@ const createProduct = async (request: Request, response: Response) => {
   });
 };
 
+const update = async (request: Request, response: Response) => {
+  const authorization = await verifyAuthorization(
+    request.headers.authorization,
+  );
+
+  if (authorization.err) {
+    return error(response, {
+      error: authorization.val.message,
+      statusCode: 401,
+    });
+  }
+
+  const id = request.params.id;
+
+  const originalProduct = await ProductService.find(id);
+
+  if (originalProduct === null) {
+    return error(response, {
+      error: "Product not found.",
+      statusCode: 404,
+    });
+  }
+
+  const title = request.params.title === null ?
+                originalProduct.title :
+                request.params.title;
+  const description = request.params.description === null ?
+                      originalProduct.description :
+                      request.params.description;
+  const price = request.params.price === null ?
+                originalProduct.price :
+                parseFloat(request.params.price);
+  const imageUrl = request.params.imageUrl === null ?
+                   originalProduct.imageUrl :
+                   request.params.imageUrl;
+
+  const updatedProduct = await ProductService.update(
+    id,
+    title,
+    description,
+    price,
+    imageUrl,
+  );
+
+  if (updatedProduct === null) {
+    return error(response, {
+      error: "Product not found.",
+      statusCode: 404,
+    });
+  }
+
+  return success(response, {
+    data: {
+      product: updatedProduct,
+    },
+    statusCode: 200,
+  });
+}
+
 router.get("/", getProducts);
 router.get("/:id", getProduct);
+router.put("/:id", update)
 router.post("/", createProduct);
 
 export default router;
