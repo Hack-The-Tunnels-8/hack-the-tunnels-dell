@@ -10,7 +10,9 @@ function Navbar() {
   return (
     <div className="navbar adaptive">
       <div className="navbar__logo">
-        <Link to="/" className="adaptive">Store Logo</Link>
+        <Link to="/" className="adaptive">
+          <img src="/resources/Dell_Logo.svg.png" />
+        </Link>
       </div>
       <div className="navbar__account">
         {loggedIn() === false ? (

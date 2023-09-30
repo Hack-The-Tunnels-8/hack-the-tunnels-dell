@@ -2,4 +2,29 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background-color: red !important;
+
+  &__logo {
+    img {
+      margin: 10px 10px;
+      width: 48px;
+    }
+  }
+
+  &__account {
+    button {
+      margin: 17px 10px;
+      padding: 10px 10px;
+      background-color: #222;
+      color: #bbb;
+      border-radius: 10px;
+      border: 0;
+      cursor: pointer;
+    }
+    button:hover {
+      color: #fff;
+    }
+  }
 }
