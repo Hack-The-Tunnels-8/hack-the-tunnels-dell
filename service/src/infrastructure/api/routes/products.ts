@@ -104,13 +104,6 @@ const update = async (request: Request, response: Response) => {
     imageUrl,
   );
 
-  if (updatedProduct === null) {
-    return error(response, {
-      error: "Product not found.",
-      statusCode: 404,
-    });
-  }
-
   return success(response, {
     data: {
       product: updatedProduct,
