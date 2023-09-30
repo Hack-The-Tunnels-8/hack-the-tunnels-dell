@@ -41,12 +41,12 @@ function Checkout() {
   return (
     <Page>
       <div className="checkout-page">
-        {message && <p>{message}</p>}
+        {message && <p className="adaptive">{message}</p>}
         {product && (
           <>
-            <h2>You are about to make an order with the following product:</h2>
+            <h2 className="adaptive">You are about to make an order with the following product:</h2>
             <div className="checkout-page__product">
-              <h3>Title: {product.title}</h3>
+              <h3 className="adaptive">Title: {product.title}</h3>
             </div>
             <button onClick={() => createOrder()}>
               Create Order (with customer set in code)

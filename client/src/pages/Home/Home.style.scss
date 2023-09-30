@@ -13,3 +13,30 @@
     }
   }
 }
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background-color: rgb(36, 34, 37);
+  }
+  
+  .home-page.adaptive {
+    background-color: rgb(36, 34, 37);
+  }
+
+  h1.adaptive {
+    color: rgb(217, 198, 235);
+  }
+  
+  h2.adaptive, h3.adaptive {
+    color: rgb(139, 115, 195);
+  }
+  
+  p.adaptive, a.adaptive{
+    color: rgb(80, 73, 159);
+  }
+
+  .navbar.adaptive {
+    background-color: rgb(36, 34, 37);
+  }
+}
