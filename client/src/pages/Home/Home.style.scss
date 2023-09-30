@@ -5,7 +5,8 @@
 
   &__products {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     a {
       text-decoration: none;
@@ -20,6 +21,11 @@ p, a, h1, h2, h3 {
 
 .chadApproval {
   font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 19px;
+}
+
+.product-preview-card {
+  margin: 2%;
 }
 
 @media (prefers-color-scheme: dark) {
