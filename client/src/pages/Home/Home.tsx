@@ -19,7 +19,7 @@ function Home() {
   return (
     <Page>
       <div className="home-page adaptive">
-        <h1 className="home-page__title adaptive">Dell Home</h1>
+        <h1 className="home-page__title adaptive">Dell Home ᓚᘏᗢ</h1>
         <p className="adaptive">Hello, World!</p>
         <h2 className="adaptive">Products:</h2>
         <div className="home-page__products adaptive">
