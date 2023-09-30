@@ -1,7 +1,19 @@
 .footer {
   text-align: center;
-  padding: 2%;
   width: 100%;
   background: linear-gradient(90deg, rgb(23, 230, 157), rgb(186, 46, 221));
+}
+
+.footerContent {
   color: white;
+  padding: 2%;
+  font-family: Helvetica, sans-serif;
+}
+
+.dellMan {
+  width: 100%;
+  // half height
+  height: 95px;
+  margin: 0px;
+  padding: 0px;
 }
