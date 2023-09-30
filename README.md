@@ -2,6 +2,9 @@
 
 ![Hack The Tunnels](https://i.imgur.com/hfdpJca.png)
 
+![image](https://github.com/Hack-The-Tunnels-8/hack-the-tunnels-dell/assets/84094849/880cd71e-732f-4379-bfaa-28631beffffd)
+
+
 This is the project template for [Hack The Tunnels](https://ccss.carleton.ca/hackthetunnels/).
 
 The project template utilizes [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Express](https://expressjs.com/), and [Prisma](https://www.prisma.io/).
