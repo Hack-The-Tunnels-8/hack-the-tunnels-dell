@@ -1,6 +1,9 @@
 .home-page {
   &__title {
-    color: red;
+    background: -webkit-linear-gradient(0deg, rgb(23, 230, 157), rgb(186, 46, 221));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   &__products {
@@ -15,7 +18,11 @@
   }
 }
 
-p, a, h1, h2, h3 {
+p,
+a,
+h1,
+h2,
+h3 {
   font-family: Helvetica, sans-serif;
 }
 
@@ -33,7 +40,7 @@ p, a, h1, h2, h3 {
   body {
     background-color: rgb(36, 34, 37);
   }
-  
+
   .home-page.adaptive {
     background-color: rgb(36, 34, 37);
   }
@@ -41,12 +48,14 @@ p, a, h1, h2, h3 {
   h1.adaptive {
     color: rgb(217, 198, 235);
   }
-  
-  h2.adaptive, h3.adaptive {
+
+  h2.adaptive,
+  h3.adaptive {
     color: rgb(139, 115, 195);
   }
-  
-  p.adaptive, a.adaptive{
+
+  p.adaptive,
+  a.adaptive {
     color: rgb(80, 73, 159);
   }
 
