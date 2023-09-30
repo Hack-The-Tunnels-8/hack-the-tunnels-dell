@@ -27,7 +27,7 @@ function Login() {
   return (
     <Page>
       <div className="login-page">
-        <h1>Login</h1>
+        <h1 className="adaptive">Login</h1>
         <button onClick={() => attemptLogin()}>
           Login (as user set in code)
         </button>
