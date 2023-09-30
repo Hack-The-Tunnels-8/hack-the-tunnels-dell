@@ -83,16 +83,16 @@ const update = async (request: Request, response: Response) => {
     });
   }
 
-  const title = request.params.title === null ?
+  const title = request.params.title === null || request.params.title === undefined ?
                 originalProduct.title :
                 request.params.title;
-  const description = request.params.description === null ?
+  const description = request.params.description === null || request.params.description === undefined ?
                       originalProduct.description :
                       request.params.description;
-  const price = request.params.price === null ?
+  const price = request.params.price === null || request.params.price === undefined ?
                 originalProduct.price :
                 parseFloat(request.params.price);
-  const imageUrl = request.params.imageUrl === null ?
+  const imageUrl = request.params.imageUrl === null || request.params.imageUrl === undefined ?
                    originalProduct.imageUrl :
                    request.params.imageUrl;
 
