@@ -24,7 +24,7 @@ function Home() {
         <h2 className="adaptive">Products:</h2>
         <div className="home-page__products adaptive">
           {products.map((product) => (
-            <Link to={`/products/${product.id}`} key={`${product.id}`}>
+            <Link className="product-preview-card" to={`/products/${product.id}`} key={`${product.id}`}>
               <ProductPreviewCard
                 title={product.title}
                 description={product.description}
