@@ -6,12 +6,14 @@ import "./Login.style.scss";
 
 function Login() {
   const [message, setMessage] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
   const { loggedIn, login } = useAccountContext();
   const navigate = useNavigate();
 
   const attemptLogin = async () => {
     try {
-      const message = await login("admin@email.com", "password");
+      const message = await login(email, password);
       setMessage(message);
     } catch (error) {
       console.log(error);
@@ -28,10 +30,16 @@ function Login() {
     <Page>
       <div className="login-page">
         <h1 className="adaptive">Login</h1>
-        <button onClick={() => attemptLogin()}>
-          Login (as user set in code)
-        </button>
-        {message && <p>{message}</p>}
+        <input type="text" placeholder="johndoe@email.com" onChange={(event) => {setEmail(event.target.value)}} />
+        <input type="text" placeholder="password123" onChange={(event) => {setPassword(event.target.value)}} />
+        <div>
+          <button onClick={() => attemptLogin()}>
+            Login
+          </button>
+        </div>
+        <div>
+          <p className="response">{message && <p>{message}</p>}</p>
+        </div>
       </div>
     </Page>
   );

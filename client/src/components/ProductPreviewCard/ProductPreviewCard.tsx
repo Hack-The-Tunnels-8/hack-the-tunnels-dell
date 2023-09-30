@@ -17,7 +17,7 @@ function ProductPreviewcard({ title, description, price, imageUrl }: Props) {
       </div>
       <h3 className="product-preview-card__title adaptive">{title}</h3>
       <p className="product-preview-card__description adaptive">{description}</p>
-      <p className="adaptive"> Pee Pee Poo Poo </p>
+      <p className="funny-text">SPEND MORE MONEY!!! NOW!!</p>
       <p className="product-preview-card__price adaptive">${price}</p>
     </div>
   );
