@@ -11,7 +11,7 @@ function Navbar() {
     <div className="navbar adaptive">
       <div className="navbar__logo">
         <Link to="/" className="adaptive">
-          <img src="resources/Dell_Logo.svg.png" />
+          <img src="resources/logo.png" />
         </Link>
       </div>
       <div className="navbar__account">
