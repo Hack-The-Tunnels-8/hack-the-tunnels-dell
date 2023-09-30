@@ -18,11 +18,11 @@ function Home() {
 
   return (
     <Page>
-      <div className="home-page">
-        <h1 className="home-page__title">Dell Home</h1>
-        <p>Hello, World!</p>
-        <h2>Products:</h2>
-        <div className="home-page__products">
+      <div className="home-page adaptive">
+        <h1 className="home-page__title adaptive">Dell Home</h1>
+        <p className="adaptive">Hello, World!</p>
+        <h2 className="adaptive">Products:</h2>
+        <div className="home-page__products adaptive">
           {products.map((product) => (
             <Link to={`/products/${product.id}`} key={`${product.id}`}>
               <ProductPreviewCard
