@@ -1,14 +1,25 @@
 .product-preview-card {
   &__title {
     font-style: bold;
-    color: green;
+    color: purple;
   }
 
   &__description {
-    color: blue;
+    color: pink;
   }
 
   &__image {
-    width: 10rem;
+    width: 15rem;
   }
+
+}
+.funnyGuy{
+  width: 2rem;
+  height: 2rem;
+}
+
+.chadApproval{
+  font-size: 25px;
+  color: green;
+  font-family: cursive;
 }
